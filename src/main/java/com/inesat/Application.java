@@ -147,7 +147,17 @@ public class Application {
         /*设置数据单元格格式*/
         CellStyle dataStyle = wb.createCellStyle();
         dataStyle.setBorderBottom(BorderStyle.DOUBLE);  //设置单元格线条
-
+        dataStyle.setBottomBorderColor(IndexedColors.BLACK.getIndex());   //设置单元格颜色
+        dataStyle.setBorderLeft(BorderStyle.THIN);
+        dataStyle.setLeftBorderColor(IndexedColors.BLACK.getIndex());
+        dataStyle.setBorderRight(BorderStyle.THIN);
+        dataStyle.setRightBorderColor(IndexedColors.BLACK.getIndex());
+        dataStyle.setBorderTop(BorderStyle.THIN);
+        dataStyle.setTopBorderColor(IndexedColors.BLACK.getIndex());
+        dataStyle.setAlignment(HorizontalAlignment.CENTER);    //设置水平对齐方式
+        dataStyle.setVerticalAlignment(VerticalAlignment.CENTER);  //设置垂直对齐方式
+        dataStyle.setFont(headFont);  //设置字体
+        
         //设置头部单元格样式
         CellStyle headStyle = wb.createCellStyle();
         headStyle.setBorderBottom(BorderStyle.THIN);  //设置单元格线条
