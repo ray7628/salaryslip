@@ -55,7 +55,6 @@ public class Application {
                 if (args.length > 2) {
                     outputFileName = args[2];
                 }
-
                 log.info("start transform from file {}.", inputFileName);
                 List<Map<String, String>> values = readExcel(inputFileName);
                 if (values.size() > 0) {
@@ -157,12 +156,20 @@ public class Application {
         dataStyle.setAlignment(HorizontalAlignment.CENTER);    //设置水平对齐方式
         dataStyle.setVerticalAlignment(VerticalAlignment.CENTER);  //设置垂直对齐方式
         dataStyle.setFont(headFont);  //设置字体
-        
+
         //设置头部单元格样式
         CellStyle headStyle = wb.createCellStyle();
         headStyle.setBorderBottom(BorderStyle.THIN);  //设置单元格线条
         headStyle.setBottomBorderColor(IndexedColors.BLACK.getIndex());   //设置单元格颜色
         headStyle.setBorderLeft(BorderStyle.THIN);
+        headStyle.setLeftBorderColor(IndexedColors.BLACK.getIndex());
+        headStyle.setBorderRight(BorderStyle.THIN);
+        headStyle.setRightBorderColor(IndexedColors.BLACK.getIndex());
+        headStyle.setBorderTop(BorderStyle.DOUBLE);
+        headStyle.setTopBorderColor(IndexedColors.BLACK.getIndex());
+        headStyle.setAlignment(HorizontalAlignment.CENTER);    //设置水平对齐方式
+        headStyle.setVerticalAlignment(VerticalAlignment.CENTER);  //设置垂直对齐方式
+        headStyle.setFont(headFont);  //设置字体
 
         /*设置列宽度*/
         for (int i = 0; i <= values.get(0).size(); i++) {
