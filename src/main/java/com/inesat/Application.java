@@ -44,6 +44,18 @@ public class Application {
         return args -> {
             try {
                 dateStr = LocalDate.now().plusMonths(-1).format(DateTimeFormatter.ofPattern("yyyyMM"));
+                if (args.length > 0) {
+                    dateStr = args[0];
+                }
+                String inputFileName = "工资模板.xls";
+                if (args.length > 1) {
+                    inputFileName = args[1];
+                }
+                String outputFileName = "工资条" + dateStr + ".xls";
+                if (args.length > 2) {
+                    outputFileName = args[2];
+                }
+
                 log.info("start transform from file {}.", inputFileName);
                 List<Map<String, String>> values = readExcel(inputFileName);
                 if (values.size() > 0) {
