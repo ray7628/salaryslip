@@ -1,0 +1,70 @@
+spring:
+  application:
+    name: salary
+
+logging:
+  level:
+    root: info
+
+mapping:
+  cols:
+    -
+      from: 工号
+      to: 工号
+    -
+      from: 姓名
+      to: 姓名
+    -
+      from: 岗位工资
+      to: 岗位工资
+    -
+      from: 效益工资
+      to: 效益工资
+    -
+      from: 固定津贴
+      to: 固定津贴
+    -
+      from:
+      to: 综合津贴
+    -
+      from: 劳防/高温
+      to: 劳防/高温
+    -
+      from: 奖励
+      to: 奖金
+    -
+      from: 补/扣工资
+      to: 补扣工资
+    -
+      from: 应发工资
+      to: 应发工资
+    -
+      from: 养扣8%
+      to: 养老金8%
+    -
+      from: 公积7%
+      to: 公积金7%
+    -
+      from: 养扣8%
+      to: 养老金8%
+    -
+      from: 医保2%
+      to: 医保金2%
+    -
+      from: 失保0.5%
+      to: 失业金0.5%
+    -
+      from: 补扣四金
+      to: 补扣四金
+    -
+      from: 工会费
+      to: 工会费
+    -
+      from: 税前合计
+      to: 税前合计
+    -
+      from: 扣个调税
+      to: 个人所得税
+    -
+      from: 实发工资
+      to: 实发工资
