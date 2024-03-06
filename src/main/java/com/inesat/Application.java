@@ -41,6 +41,7 @@ public class Application {
 
     @Bean
     public CommandLineRunner commandLineRunner() {
+        log.info("Full Command: java -jar salary-0.0.1-SNAPSHOT.jar 202401 工资模板.xls 工资条202401.xls");
         return args -> {
             try {
                 dateStr = LocalDate.now().plusMonths(-1).format(DateTimeFormatter.ofPattern("yyyyMM"));
