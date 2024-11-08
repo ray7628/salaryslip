@@ -114,7 +114,7 @@ public class Application {
     private void updateMappingIndexByTitleRow(List<ColMapping> cols, HSSFSheet sheet) {
         HSSFRow titleRow = sheet.getRow(0);
         if (titleRow == null) return;
-
+        log.info("titleRow is : "+titleRow);
         List<String> titleRowValue = new ArrayList<>();
         for (int i = 0; i < titleRow.getLastCellNum(); i++) {
             HSSFCell cell = titleRow.getCell(i);
